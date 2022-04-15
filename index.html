@@ -266,14 +266,101 @@
           </div>
         </div>
       </section>
+
+      <!-- Date Cipher -->
+      <section class="row mt-4">
+        <div class="col">
+          <div class="card">
+            <div class="card-header bg-info text-white">
+              <h2 class="my-2">Date Cipher</h2>
+            </div>
+            <div class="card-body">
+              <p>
+                The Date Cipher requires a standard alphabet and a date 
+                to apply a shift to the message. Letters from the standard 
+                alphabet will be transposed to the shifted alphabet. This 
+                cipher requires that the recipient have the same date, 
+                otherwise it will be difficult for them to decode the message.
+              </p>
+              <hr />
+              <form id="dateCipher">
+                <div class="form-group">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="dateCipher-options"
+                      id="dateCipher-options-encode"
+                      value="encode"
+                      checked
+                    />
+                    <label
+                      class="form-check-label"
+                      for="dateCipher-options-encode"
+                      >Encode</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="dateCipher-options"
+                      id="dateCipher-options-decode"
+                      value="decode"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="dateCipher-options-decode"
+                      >Decode</label
+                    >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="dateCipher-input">Your message</label>
+                  <textarea
+                    class="form-control"
+                    id="dateCipher-input"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="dateCipher-date">date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="dateCipher-date"
+                    maxlength="26"
+                  />
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </form>
+            </div>
+            <div
+              id="dateCipher-alert"
+              class="alert alert-danger mb-0 rounded-0 d-none"
+              role="alert"
+            >
+              Something went wrong! Check your input and date key.
+            </div>
+            <div class="card-footer">
+              Output:
+              <span class="font-weight-bold" id="dateCipher-output"
+                >No message as of yet...</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./scripts/setup.js"></script>
     <script src="./src/caesar.js"></script>
     <script src="./src/polybius.js"></script>
     <script src="./src/substitution.js"></script>
+    <script src="./src/dateCipher.js"></script>
     <script src="./scripts/caesar.js"></script>
     <script src="./scripts/polybius.js"></script>
     <script src="./scripts/substitution.js"></script>
+    <script src="./scripts/dateCipher.js"></script>
   </body>
 </html>
